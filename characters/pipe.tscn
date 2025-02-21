@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=3 uid="uid://cne6hee0hccgk"]
+
+[ext_resource type="Texture2D" uid="uid://dohhvhe543igy" path="res://Sprites/Sprout Lands - Sprites - Basic pack/Objects/Basic_Grass_Biom_things.png" id="1_vncsx"]
+[ext_resource type="Script" path="res://characters/pipe.gd" id="2_7tg0f"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_08tte"]
+size = Vector2(34, 35)
+
+[node name="BrokenPipe" type="Node2D" node_paths=PackedStringArray("state_1", "state_2")]
+script = ExtResource("2_7tg0f")
+state_1 = NodePath("unfixed pipe")
+state_2 = NodePath("fixed pipe")
+
+[node name="unfixed pipe" type="Sprite2D" parent="."]
+texture = ExtResource("1_vncsx")
+region_enabled = true
+region_rect = Rect2(51.7862, 0.0207024, 25.1276, 32.7217)
+
+[node name="fixed pipe" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("1_vncsx")
+region_enabled = true
+region_rect = Rect2(19.2894, 0.132887, 26.356, 32.4983)
+
+[node name="Area2D" type="Area2D" parent="."]
+y_sort_enabled = true
+collision_mask = 15
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_08tte")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

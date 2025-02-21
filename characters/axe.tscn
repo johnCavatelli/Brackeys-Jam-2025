@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=3 uid="uid://dxlg38cii857g"]
+
+[ext_resource type="Script" path="res://characters/axe.gd" id="1_2uwes"]
+[ext_resource type="Texture2D" uid="uid://dlpab5q7lrpg2" path="res://Sprites/Sprout Lands - Sprites - Basic pack/Objects/Basic_tools_and_meterials.png" id="1_a0g2i"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ctupr"]
+size = Vector2(7.53365, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hdyk7"]
+size = Vector2(19.1219, 19.1219)
+
+[node name="axe" type="CharacterBody2D"]
+collision_layer = 2
+collision_mask = 11
+script = ExtResource("1_2uwes")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_a0g2i")
+hframes = 3
+vframes = 2
+frame = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1.19209e-07, 2.4501e-08)
+shape = SubResource("RectangleShape2D_ctupr")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_mask = 4
+
+[node name="axe_pickup_zone" type="CollisionShape2D" parent="Area2D"]
+scale = Vector2(1.74741, 1.74741)
+shape = SubResource("RectangleShape2D_hdyk7")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
