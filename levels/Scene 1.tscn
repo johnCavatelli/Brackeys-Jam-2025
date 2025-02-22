@@ -1,6 +1,7 @@
-[gd_scene load_steps=18 format=4 uid="uid://kevhokqchnwp"]
+[gd_scene load_steps=19 format=4 uid="uid://kevhokqchnwp"]
 
 [ext_resource type="PackedScene" uid="uid://d33bfvwb03dqj" path="res://characters/player_cat.tscn" id="1_0kchy"]
+[ext_resource type="Script" path="res://levels/Level_Controller.gd" id="1_l7nkl"]
 [ext_resource type="Texture2D" uid="uid://kn71wfi1htkt" path="res://Sprites/Sprout Lands - Sprites - Basic pack/Tilesets/Grass.png" id="2_uw5nc"]
 [ext_resource type="Texture2D" uid="uid://djg58u38755b1" path="res://Sprites/Sprout Lands - Sprites - Basic pack/Tilesets/Hills.png" id="3_l8uha"]
 [ext_resource type="Texture2D" uid="uid://bu1x08hmwyyid" path="res://Sprites/Sprout Lands - Sprites - Basic pack/Tilesets/Tilled_Dirt_v2.png" id="4_po3v5"]
@@ -306,10 +307,13 @@ sources/3 = SubResource("TileSetAtlasSource_up8n4")
 sources/4 = SubResource("TileSetAtlasSource_eubj1")
 sources/5 = SubResource("TileSetAtlasSource_nnqmk")
 
-[node name="GameLevel" type="Node2D"]
+[node name="GameLevel" type="Node2D" groups=["Level"]]
+script = ExtResource("1_l7nkl")
+LowTimeColor = Color(0.947113, 0.277921, 0.562217, 1)
+OgColor = Color(0.19615, 0.23945, 0.0967112, 1)
 
 [node name="Player Cat" parent="." instance=ExtResource("1_0kchy")]
-position = Vector2(97, 56)
+position = Vector2(187, 207)
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="Player Cat"]
 remote_path = NodePath("../../Camera2D")
@@ -335,13 +339,16 @@ tile_set = SubResource("TileSet_nv24e")
 metadata/_edit_lock_ = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(97, 56)
+position = Vector2(187, 207)
 scale = Vector2(1.5218, 1.5218)
 zoom = Vector2(4, 4)
 drag_horizontal_enabled = true
 drag_vertical_enabled = true
 
-[node name="Inventory" parent="." instance=ExtResource("8_fk67m")]
+[node name="UI" parent="Camera2D" instance=ExtResource("8_fk67m")]
+unique_name_in_owner = true
+position = Vector2(-63.7403, -36.7985)
+scale = Vector2(0.657117, 0.657117)
 
 [node name="axe" parent="." instance=ExtResource("9_taxoq")]
 position = Vector2(99, 101)
@@ -349,4 +356,10 @@ position = Vector2(99, 101)
 [node name="BrokenPipe" parent="." instance=ExtResource("10_17ged")]
 position = Vector2(-6, 96)
 
-[connection signal="throw_axe" from="Inventory" to="Player Cat" method="_on_inventory_throw_axe"]
+[node name="BrokenPipe2" parent="." instance=ExtResource("10_17ged")]
+position = Vector2(-41, 169)
+
+[node name="BrokenPipe3" parent="." instance=ExtResource("10_17ged")]
+position = Vector2(34, 209)
+
+[connection signal="throw_axe" from="Camera2D/UI" to="Player Cat" method="_on_inventory_throw_axe"]

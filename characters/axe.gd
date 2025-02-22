@@ -1,18 +1,15 @@
 extends CharacterBody2D
 
 var is_player_inside: bool = false
-var inventory
+var inventory : Node2D
 @export var throw_speed: float = 500
 #@export var rb : RigidBody2D
 @export var direction: Vector2 = Vector2.ZERO
 
 func _ready():
-	for child in get_tree().root.get_node(".").get_children():
-			print("Found child:", child.name)
-	inventory = get_tree().root.get_node("./GameLevel/Inventory")
 	set_as_top_level(true)# Makes sure it doesn't get affected by the parent's transforms
 	print("setup")
-	#rb.position = position
+	inventory = get_tree().get_nodes_in_group("UI")[0]
 
 
 func _process(delta):
@@ -25,13 +22,9 @@ func _process(delta):
 		velocity = Vector2.ZERO
 	move_and_slide()
 
-
 func ThrowInDirection() -> void:
 	print(direction)
 	velocity = direction * throw_speed
-	#rb.position = position
-	
-
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	is_player_inside = true
@@ -40,3 +33,7 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 
 func _on_area_2d_body_exited(body: Node2D) -> void:
 	is_player_inside = false
+	
+func hit_objective():
+	velocity *= 0.2
+	

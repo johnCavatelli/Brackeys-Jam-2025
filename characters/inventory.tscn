@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dlpab5q7lrpg2" path="res://Sprites/Sprout Lands - Sprites - Basic pack/Objects/Basic_tools_and_meterials.png" id="2_xut8e"]
 [ext_resource type="Texture2D" uid="uid://ctjlyq6e5ugn6" path="res://Sprites/Sprout Lands - Sprites - Basic pack/Objects/Free_Chicken_House.png" id="4_pdgpi"]
 
-[node name="Inventory" type="Node2D" node_paths=PackedStringArray("texture")]
+[node name="UI" type="Node2D" node_paths=PackedStringArray("texture") groups=["UI"]]
 script = ExtResource("1_ranby")
 texture = NodePath("CanvasLayer/TextureRect")
 axe_texture = ExtResource("2_xut8e")
@@ -17,4 +17,25 @@ offset_left = 17.0
 offset_top = 11.0
 offset_right = 57.0
 offset_bottom = 51.0
+scale = Vector2(3.04545, 3.04545)
 texture = ExtResource("4_pdgpi")
+
+[node name="Label2" type="Label" parent="CanvasLayer"]
+offset_left = 45.0
+offset_top = 208.0
+offset_right = 213.0
+offset_bottom = 244.0
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_font_sizes/font_size = 26
+text = "Objectives: 0"
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+offset_left = 45.0
+offset_top = 158.0
+offset_right = 213.0
+offset_bottom = 194.0
+theme_override_font_sizes/font_size = 26
+text = "Time Left:  60"
+
+[node name="Timer" type="Timer" parent="CanvasLayer"]
+wait_time = 20.0
