@@ -1,7 +1,20 @@
-[background arg="res://Sprites/backgrounds/IMG_1470.jpg" fade="0.0"]
+[background arg="res://Sprites/backgrounds/IMG_1467.jpg" fade="0.0"]
 join Bug left
 join June right
 June shows up to the factory and starts inspecting it without even saying anything to me
 After yesterday, the suspense is killing me. Will I pass?
 I really have no clue
+[wait time="1.0"]
+June: Wow! Great job! The factory looks perfect!
+update Bug (Blush)
+[wait time="1.0"]
+June (Laughing): Well, you passed!... I guess that means— Well, where did you want to take me?
+June (Giddy): Y'know, on the date?
+Bug (Happy): I know just the place!
+leave Bug
+leave June
+[background arg="res://Sprites/backgrounds/IMG_1470.jpg" fade="0.0"]
+join Bug center
+join June center
+The End!!!!!!!
 [signal arg="done_with_dialogue"]

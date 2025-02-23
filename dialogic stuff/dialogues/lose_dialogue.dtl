@@ -1,9 +1,7 @@
 [background arg="res://Sprites/backgrounds/IMG_1467.jpg" fade="0.0"]
 join June center
 join Bug center
-June: I can't belive you
-Bug: What
-June: You failed, this place is a mess, I'm never going out with you CREEP
-Bug: ....
-GAME OVER \:( GAME OVER \:( GAME OVER \:( GAME OVER \:( GAME OVER \:(
+June (Disappointed): Sam... you failed the inspection...
+Bug (Shocked): ....
+Game Over! \:(
 [signal arg="done_with_dialogue"]
