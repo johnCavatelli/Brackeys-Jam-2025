@@ -281,11 +281,12 @@ sources/3 = SubResource("TileSetAtlasSource_bam3a")
 [node name="GameLevel" type="Node2D" groups=["Level"]]
 y_sort_enabled = true
 script = ExtResource("1_g3v33")
+totalObjectives = 9
 LowTimeColor = Color(0.947113, 0.277921, 0.562217, 1)
 OgColor = Color(0.856571, 0.930546, 0.718877, 1)
 win_scene = ExtResource("2_mxqff")
 lose_scene = ExtResource("3_5nt6i")
-timerLength = 45.0
+timerLength = 90.0
 
 [node name="Player Cat" parent="." instance=ExtResource("4_gli52")]
 position = Vector2(-757, 177)

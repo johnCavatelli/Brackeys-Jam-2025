@@ -281,11 +281,12 @@ sources/3 = SubResource("TileSetAtlasSource_bam3a")
 [node name="GameLevel" type="Node2D" groups=["Level"]]
 y_sort_enabled = true
 script = ExtResource("1_jtjib")
+totalObjectives = 8
 LowTimeColor = Color(0.947113, 0.277921, 0.562217, 1)
 OgColor = Color(0.856571, 0.930546, 0.718877, 1)
 win_scene = ExtResource("2_6dg32")
 lose_scene = ExtResource("3_p208t")
-timerLength = 2.0
+timerLength = 65.0
 
 [node name="Player Cat" parent="." instance=ExtResource("4_13b3v")]
 position = Vector2(-622, 52)
@@ -347,7 +348,7 @@ position = Vector2(-376, -376)
 position = Vector2(-333, 39)
 
 [node name="shovel" parent="." instance=ExtResource("13_mxgu4")]
-position = Vector2(352, 320)
+position = Vector2(-584, -187)
 
 [node name="Pile of Coal" parent="." instance=ExtResource("14_s6bun")]
 position = Vector2(-637, -236)

@@ -9,7 +9,7 @@ var timeUntilDecreaseLevel: float
 
 func _ready() -> void:
 	animationPlayer.play("no_coal")
-	coalLevel = 0
+	coalLevel = 2
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	print(body.name)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=4 uid="uid://bnntph43esmhg"]
+[gd_scene load_steps=24 format=4 uid="uid://bnntph43esmhg"]
 
 [ext_resource type="Script" path="res://levels/Level_Controller.gd" id="1_ykaxd"]
 [ext_resource type="PackedScene" uid="uid://doljf57yjf6w" path="res://levels/Dialogue_2.tscn" id="2_dxfck"]
@@ -14,7 +14,6 @@
 [ext_resource type="PackedScene" uid="uid://cne6hee0hccgk" path="res://characters/pipe.tscn" id="12_d1qvq"]
 [ext_resource type="PackedScene" uid="uid://gidunixm8ebn" path="res://characters/shovel.tscn" id="13_ejiov"]
 [ext_resource type="PackedScene" uid="uid://c4i4wewsfg1bp" path="res://characters/pile_of_coal.tscn" id="14_mqiko"]
-[ext_resource type="PackedScene" uid="uid://b73vfj8cjqshr" path="res://characters/furnace.tscn" id="15_2g11a"]
 [ext_resource type="PackedScene" uid="uid://clwiebhp7jjjt" path="res://characters/mop.tscn" id="16_w083v"]
 [ext_resource type="PackedScene" uid="uid://cnbwgtk7ekxo1" path="res://characters/spill.tscn" id="17_85ukc"]
 [ext_resource type="AudioStream" uid="uid://bp6rkgkh6vb6h" path="res://audio/music/gameplay_loop.wav" id="18_bkogv"]
@@ -281,11 +280,12 @@ sources/3 = SubResource("TileSetAtlasSource_bam3a")
 [node name="GameLevel" type="Node2D" groups=["Level"]]
 y_sort_enabled = true
 script = ExtResource("1_ykaxd")
+totalObjectives = 7
 LowTimeColor = Color(0.947113, 0.277921, 0.562217, 1)
 OgColor = Color(0.856571, 0.930546, 0.718877, 1)
 win_scene = ExtResource("2_dxfck")
 lose_scene = ExtResource("3_uabuf")
-timerLength = 2.0
+timerLength = 60.0
 
 [node name="Player Cat" parent="." instance=ExtResource("4_g5v8b")]
 position = Vector2(-478, -50)
@@ -347,9 +347,6 @@ position = Vector2(352, 320)
 
 [node name="Pile of Coal" parent="." instance=ExtResource("14_mqiko")]
 position = Vector2(366, 267)
-
-[node name="Furnace" parent="." instance=ExtResource("15_2g11a")]
-position = Vector2(421, 267)
 
 [node name="mop" parent="." instance=ExtResource("16_w083v")]
 position = Vector2(-148, -359)

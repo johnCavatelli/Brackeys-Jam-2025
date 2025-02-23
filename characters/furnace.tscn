@@ -1,7 +1,8 @@
-[gd_scene load_steps=10 format=3 uid="uid://b73vfj8cjqshr"]
+[gd_scene load_steps=11 format=3 uid="uid://b73vfj8cjqshr"]
 
 [ext_resource type="Script" path="res://characters/furnace.gd" id="1_8g0x5"]
 [ext_resource type="Texture2D" uid="uid://devqcjdbvnofk" path="res://Sprites/icinerators.png" id="2_8m0w7"]
+[ext_resource type="PackedScene" uid="uid://cc1x5lsxk6442" path="res://levels/Dialogue_Furnace_burned_out.tscn" id="2_twn7m"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_08tte"]
 size = Vector2(34, 35)
@@ -100,7 +101,7 @@ _data = {
 
 [node name="Furnace" type="Node2D"]
 script = ExtResource("1_8g0x5")
-stokeTime = 5.0
+burnout_scene = ExtResource("2_twn7m")
 
 [node name="FurnaceSprite" type="Sprite2D" parent="."]
 texture = ExtResource("2_8m0w7")

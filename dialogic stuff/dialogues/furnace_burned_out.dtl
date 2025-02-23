@@ -1,0 +1,3 @@
+[background fade="0.0"]
+The furnace burned out...
+[signal arg="done_with_dialogue"]
