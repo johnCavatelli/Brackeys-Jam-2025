@@ -1,4 +1,4 @@
-[gd_scene load_steps=48 format=3 uid="uid://d33bfvwb03dqj"]
+[gd_scene load_steps=50 format=3 uid="uid://d33bfvwb03dqj"]
 
 [ext_resource type="Script" path="res://characters/player_cat.gd" id="1_6v2wb"]
 [ext_resource type="PackedScene" uid="uid://dxlg38cii857g" path="res://characters/axe.tscn" id="2_ynsdg"]
@@ -6,6 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://gidunixm8ebn" path="res://characters/shovel.tscn" id="3_l2tl6"]
 [ext_resource type="Texture2D" uid="uid://5degjtfy13fq" path="res://Sprites/player_cropped.png" id="3_sn0es"]
 [ext_resource type="PackedScene" uid="uid://davckj3qfm1kf" path="res://characters/chovel.tscn" id="4_4ay0r"]
+[ext_resource type="PackedScene" uid="uid://daqgwbjuwy0f2" path="res://characters/dead_zombie.tscn" id="6_10qxb"]
+[ext_resource type="AudioStream" uid="uid://cu70ia5j8kd7q" path="res://audio/throw weapon.mp3" id="8_lewoc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_a2f2u"]
 size = Vector2(7.88538, 4.87522)
@@ -435,6 +437,7 @@ axe_scene = ExtResource("2_ynsdg")
 mop_scene = ExtResource("3_ggo2a")
 shovel_scene = ExtResource("3_l2tl6")
 chovel_scene = ExtResource("4_4ay0r")
+body_scene = ExtResource("6_10qxb")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 y_sort_enabled = true
@@ -457,3 +460,6 @@ tree_root = SubResource("AnimationNodeStateMachine_88rwx")
 anim_player = NodePath("../AnimationPlayer")
 parameters/Idle/blend_position = Vector2(-0.457197, -0.0568966)
 parameters/Walk/blend_position = Vector2(0, 0)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_lewoc")

@@ -5,6 +5,8 @@ extends Node2D
 @export var burnout_scene : PackedScene
 var coalLevel: int
 var timeUntilDecreaseLevel: float
+@onready var sfx: AudioStreamPlayer2D = $sfx
+@onready var sfx_2: AudioStreamPlayer2D = $sfx2
 
 
 func _ready() -> void:
@@ -19,9 +21,16 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 				print("collided with shovel with coal in it")
 				fill_furnace()
 				body.blow_your_load()
-	if(body.name.contains("chovel")):
+				sfx.play()
+	elif(body.name.contains("chovel")):
 		fill_furnace()
 		body.blow_your_load()
+		sfx.play()
+	elif(body.name.contains("body")):
+		body.destroy_body()
+		sfx_2.play()
+		var levelManager = get_tree().get_nodes_in_group("Level")[0]
+		levelManager.objectiveComplete()
 		
 func _process(delta: float) -> void:
 	timeUntilDecreaseLevel -= delta

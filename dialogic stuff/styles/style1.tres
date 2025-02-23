@@ -42,7 +42,7 @@ overrides = {
 "text_size": "50.0",
 "text_use_global_size": "false",
 "typing_sounds_pitch": "3.0",
-"typing_sounds_pitch_variance": "3.0",
+"typing_sounds_pitch_variance": "1.0",
 "typing_sounds_volume_variance": "1.0"
 }
 

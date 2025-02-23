@@ -1,7 +1,9 @@
-[gd_scene load_steps=18 format=3 uid="uid://b6418yf2ua702"]
+[gd_scene load_steps=20 format=3 uid="uid://b6418yf2ua702"]
 
 [ext_resource type="Script" path="res://levels/zombie.gd" id="1_8k3dt"]
 [ext_resource type="Texture2D" uid="uid://kp5iw7v3ba51" path="res://Sprites/zombie_sheet_final_half.png" id="2_5d8w5"]
+[ext_resource type="PackedScene" uid="uid://daqgwbjuwy0f2" path="res://characters/dead_zombie.tscn" id="2_b5kc6"]
+[ext_resource type="AudioStream" uid="uid://ium21rehx7co" path="res://audio/scream.wav" id="4_i0udb"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rq3bs"]
 atlas = ExtResource("2_5d8w5")
@@ -117,6 +119,7 @@ size = Vector2(10, 9)
 
 [node name="Zombie" type="CharacterBody2D"]
 script = ExtResource("1_8k3dt")
+deadZombie = ExtResource("2_b5kc6")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -3)
@@ -133,9 +136,13 @@ path_postprocessing = 1
 avoidance_enabled = true
 
 [node name="Hitbox" type="Area2D" parent="."]
+collision_mask = 15
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
 scale = Vector2(1.79016, 1.79016)
 shape = SubResource("RectangleShape2D_xgvmh")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_i0udb")
 
 [connection signal="body_entered" from="Hitbox" to="." method="_on_hitbox_body_entered"]
