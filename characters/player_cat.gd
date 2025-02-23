@@ -6,10 +6,12 @@ extends CharacterBody2D
 @export var mop_scene: PackedScene
 @export var shovel_scene: PackedScene
 @export var chovel_scene: PackedScene
+@export var body_scene: PackedScene
 var facingDirection: Vector2
 
 @onready var animation_tree = $AnimationTree
 @onready var state_machine = animation_tree.get("parameters/playback")
+@onready var audio_stream_player_2d: AudioStreamPlayer2D = $AudioStreamPlayer2D
 
 func _ready():
 	update_animation_parameters(starting_direction)
@@ -51,6 +53,7 @@ func _on_inventory_throw_axe() -> void:
 	axe.position = position + facingDirection
 	axe.direction = facingDirection
 	axe.ThrowInDirection()
+	audio_stream_player_2d.play()
 
 
 func _on_ui_throw_shovel() -> void:
@@ -60,6 +63,7 @@ func _on_ui_throw_shovel() -> void:
 	shovel.position = position + facingDirection
 	shovel.direction = facingDirection
 	shovel.ThrowInDirection()
+	audio_stream_player_2d.play()
 
 
 func _on_ui_throw_chovel() -> void:
@@ -69,6 +73,7 @@ func _on_ui_throw_chovel() -> void:
 	chovel.position = position + facingDirection
 	chovel.direction = facingDirection
 	chovel.ThrowInDirection()
+	audio_stream_player_2d.play()
 
 
 func _on_ui_throw_mop() -> void:
@@ -78,3 +83,14 @@ func _on_ui_throw_mop() -> void:
 	mop.position = position + facingDirection
 	mop.direction = facingDirection
 	mop.ThrowInDirection()
+	audio_stream_player_2d.play()
+
+
+func _on_ui_throw_body() -> void:
+	var body = body_scene.instantiate()
+	body.name = "body" + str(RandomNumberGenerator.new().randi_range(10,99999999999))
+	get_parent().add_child(body)
+	body.position = position + facingDirection
+	body.direction = facingDirection
+	body.ThrowInDirection()
+	audio_stream_player_2d.play()

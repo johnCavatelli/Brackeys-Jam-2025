@@ -297,7 +297,7 @@ sources/3 = SubResource("TileSetAtlasSource_bam3a")
 [node name="GameLevel" type="Node2D" groups=["Level"]]
 y_sort_enabled = true
 script = ExtResource("1_g3v33")
-totalObjectives = 9
+totalObjectives = 10
 LowTimeColor = Color(0.947113, 0.277921, 0.562217, 1)
 OgColor = Color(0.856571, 0.930546, 0.718877, 1)
 win_scene = ExtResource("2_mxqff")
@@ -404,7 +404,16 @@ autoplay = true
 position = Vector2(-584, 181)
 target = NodePath("../Player Cat")
 
+[node name="Zombie2" parent="." node_paths=PackedStringArray("target") instance=ExtResource("19_0v64k")]
+position = Vector2(-522, -290)
+target = NodePath("../Player Cat")
+
+[node name="Zombie3" parent="." node_paths=PackedStringArray("target") instance=ExtResource("19_0v64k")]
+position = Vector2(-148, -114)
+target = NodePath("../Player Cat")
+
 [connection signal="throw_axe" from="Camera2D/UI" to="Player Cat" method="_on_inventory_throw_axe"]
+[connection signal="throw_body" from="Camera2D/UI" to="Player Cat" method="_on_ui_throw_body"]
 [connection signal="throw_chovel" from="Camera2D/UI" to="Player Cat" method="_on_ui_throw_chovel"]
 [connection signal="throw_mop" from="Camera2D/UI" to="Player Cat" method="_on_ui_throw_mop"]
 [connection signal="throw_shovel" from="Camera2D/UI" to="Player Cat" method="_on_ui_throw_shovel"]

@@ -3,6 +3,7 @@ extends Node2D
 @export var state_1 : AnimatedSprite2D
 @export var state_2 : Sprite2D
 var hit : bool
+@onready var fix_noise: AudioStreamPlayer2D = $fixNoise
 
 func _ready() -> void:
 	hit = false
@@ -20,6 +21,7 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 			change_state()
 		
 func change_state():
+	fix_noise.play()
 	state_1.hide()
 	state_2.show()
 	hit = true

@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://obitkhns1yxi"]
+[gd_scene load_steps=9 format=3 uid="uid://obitkhns1yxi"]
 
 [ext_resource type="Script" path="res://characters/inventory.gd" id="1_ranby"]
 [ext_resource type="Texture2D" uid="uid://cdjbkirfnvt11" path="res://Sprites/tools/wrench.png" id="2_mrdcq"]
@@ -6,6 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://fe37cnxs7bld" path="res://Sprites/tools/shovel.png" id="4_sv0v3"]
 [ext_resource type="Texture2D" uid="uid://dj0d2j67y4h3c" path="res://Sprites/tools/chovel.png" id="5_q1y88"]
 [ext_resource type="Texture2D" uid="uid://qminkkswep21" path="res://Sprites/holder.png" id="6_l4so3"]
+[ext_resource type="Texture2D" uid="uid://gvjkpcv3oduy" path="res://Sprites/dead_zombie.png" id="6_x8re4"]
+[ext_resource type="AudioStream" uid="uid://bx2pfjradi7g7" path="res://audio/pickup item.mp3" id="8_6ntvu"]
 
 [node name="UI" type="Node2D" node_paths=PackedStringArray("texture") groups=["UI"]]
 script = ExtResource("1_ranby")
@@ -14,6 +16,7 @@ axe_texture = ExtResource("2_mrdcq")
 mop_texture = ExtResource("3_pfp1v")
 shovel_texture = ExtResource("4_sv0v3")
 chovel_texture = ExtResource("5_q1y88")
+body_texture = ExtResource("6_x8re4")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -52,3 +55,7 @@ text = "Time Left:  60"
 
 [node name="Timer" type="Timer" parent="CanvasLayer"]
 wait_time = 20.0
+
+[node name="pickup_sound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_6ntvu")
+volume_db = -3.104
