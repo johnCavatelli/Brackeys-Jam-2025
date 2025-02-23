@@ -1,3 +1,33 @@
 [background arg="res://Sprites/backgrounds/IMG_1467.jpg" fade="0.0"]
-This is after the second day is completed
+join June left
+join Bug right
+I meet up with June at the front entrance of the factory
+June (Giddy): Hello again! Ready for the second day of inspections? 
+Bug: I guess so...
+June (Happy): Why do you seem so glum? Yesterday went fantastic!
+Bug (Blush): Oh, a, ah... nevermind
+June: Well, alright then. Let's get to it.
+update Bug (Neutral)
+I show June to the second wing of the factory and she begins inspections.
+[wait time="1.0"]
+After some amount of time and some amount of measuring and note taking on the part of June, she enthusiatically struts back over to where I'm standing.
+June: You did fantastic, same as yesterday!
+I feel a little sad knowing I'll only get to hang out with June for one more day.
+June (Disappointed): Why the long face?
+Bug: Well, remember when you would be out of my hair, after you wrapped up inspections?
+June: Yeah... ?
+Bug (Blush): Well, I, uhm...
+Bug: I really like you June, and I'm sad that I might never see you again after tomorrow...
+[wait time="1.0"]
+Bug: Would you go on a date with me?
+June (Laughing): Only if you pass your inspections!!!!!!! Bye!!!!!!!!!!
+leave June
+leave Bug
+[background fade="0.0"]
+join Bug center
+The next day, I don't even go to the gas station. I go straight to the factory. I have work to do...
+leave Bug
+[background arg="res://Sprites/backgrounds/IMG_1467.jpg" fade="0.0"]
+join Bug center
+This is the biggest wing of the factory yet and it's a total mess. And I have to keep the furnace running again because we are running more reactions in it today.
 [signal arg="done_with_dialogue"]

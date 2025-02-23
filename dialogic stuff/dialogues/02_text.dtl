@@ -1,3 +1,49 @@
 [background arg="res://Sprites/backgrounds/IMG_1467.jpg" fade="0.0"]
-Nice job on your first day of 3 days of inspection
+join June left
+join Bug right
+June: Huh? Sam, what are you doing here?
+Bug (Blush): I work here...
+June: What do you do????
+Bug: I'm the... uh...
+Bug (Neutral): I'm the floor manager...
+June (Disappointed): Hmmm, that's unexpected....
+June (Happy): Well, let's take a look
+June spends about an hour poking around my factory, measuring things with various digital instruments and analog dials. It feels personal for some reason, like someone is staring straight through my soul. She approaches me once she is done inspecting. 
+June (Giddy): Hey... your factory looks great!
+Bug (Blush): Really??
+June (Laughing): Yeah!
+June (Happy): I'll be back tomorrow to see the next part of your factory. After that, just one more day of inspection and I'll be out of your hair!
+Bug (Neutral): June gives a shy wave before leaving through one of the large factory doors.
+leave June
+update Bug center
+I will admit, June's passion for safety is absolutely contagious.
+... I think this whole safety thing might be starting to grow one me.
+leave Bug
+[background fade="0.0"]
+join Bug center
+Bug: The next day I wake up and go to the gas station.
+leave Bug
+[background arg="res://Sprites/backgrounds/IMG_1470.jpg" fade="0.0"]
+join Bug center
+And June happens to be in line at the counter...
+update Bug right
+join June left
+June (Giddy): Heya, can I get this egg sandwhich?
+Clerk: Sure. That'll be 4.56
+That's funny, I often come here to get breakfast too.
+I go up to the counter to pay for my breakfast burrito. June notices me and gives me a small wave.
+June (Happy): Hey Sam! Ready for day 2 of inspections?
+Bug: Ready as I'll ever be...
+We eat our breakfast together silently on the curb of the gas station side walk, both of us intently focusing on our food.
+[wait time="1.0"]
+June finishes her sandwhich.
+June (Giddy): Well, I gotta run! see ya later Sam!
+leave June
+update Bug center
+Bug: See ya...
+leave Bug
+[background arg="res://Sprites/backgrounds/IMG_1467.jpg" fade="0.0"]
+join Bug center
+Bug: Today we are running a reaction in the incinerator so I have to keep it fueled up with coal. I gotta shovel the coal, from the place where the coal is, into the furnace, and make sure it doesn't run out
+Bug: Or I'm toast.
 [signal arg="done_with_dialogue"]
