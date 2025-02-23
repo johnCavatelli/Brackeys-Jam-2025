@@ -17,7 +17,7 @@
 "portraits": {
 "Blush": {
 "export_overrides": {
-"image": "\"mc_blush.png\""
+"image": "\"res://portraits/mc_blush.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),

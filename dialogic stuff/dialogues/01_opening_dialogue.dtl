@@ -14,6 +14,26 @@ June: Can I get a pack of Dramadaries?
 Clerk: Sure. That'll be 4.56
 In exchange for a fiver she recieves change and the aforementioned cigarettes. Funnily enough, I smoke Dramadaries too.
 I buy my cigarettes. The girl in the hard hat glanced at me when I stated my preference of brand.
-update June
+update June (Laughing)
 June: That's funny!— I don't know many people who smoke Dramadaries!
+update June (Happy)
+Bug (Blush): Hmmm, I guess I don't either...
+[wait time="1.5"]
+Bug (Neutral): Say... What's with the hard hat?
+June (Laughing): I'm a WOSHA inspector! I'm doing an inspection of some factory around 1 p.m. today.
+update Bug (Shocked)
+... My factory is getting inspected around 1 p.m. today ...
+update June (Happy)
+Bug (Neutral): Safety...........    Cool.....
+June (Giddy): It is cool— I'm incredibly passionate about safety!
+June (Happy): I gotta get going, but what did you say your name was?
+Bug: The name is Sam. And you?
+June: I'm June. See ya around!
+Bug: See ya....
+leave Bug
+leave June
+[background arg="res://Sprites/backgrounds/IMG_1467.jpg" fade="0.0"]
+join Bug (Shocked) center
+Crap... A cute girl is doing a safety inspection of my factory and it's a total mess!
+There are bursted pipes and mysterious spills everywhere! I gotta use my trusty wrench to fix these pipes and mop up all these spills!
 [signal arg="done_with_dialogue"]
