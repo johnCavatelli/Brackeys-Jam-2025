@@ -1,5 +1,19 @@
+join Bug (Neutral) center
+My name is Sam. I'm the factory floor manager at SpillTech Industries. Unfortunately, WOSHA is inspecting my factory this week...
+I'm really stressed out!!
+My factory is a certainly-not-up-to-code mess! None of my employees will do anything about it because HR says "it is one of my responsibilites as manager to ensure the floor is a safe and responsible working environment."
+I think the employees are fine! We've only had two incidents this week...
+leave Bug
 [background arg="res://Sprites/backgrounds/IMG_1470.jpg" fade="0.0"]
-Bug: Hello World!
-June: Hello There
-Bug: Emphazima
+join Bug center
+Before work, I go to the gas station to buy cigarettes
+A cute girl is at the counter of the gas station.... and she's wearing a hard hat?
+update Bug right
+join June (Happy) left
+June: Can I get a pack of Dramadaries?
+Clerk: Sure. That'll be 4.56
+In exchange for a fiver she recieves change and the aforementioned cigarettes. Funnily enough, I smoke Dramadaries too.
+I buy my cigarettes. The girl in the hard hat glanced at me when I stated my preference of brand.
+update June
+June: That's funny!— I don't know many people who smoke Dramadaries!
 [signal arg="done_with_dialogue"]

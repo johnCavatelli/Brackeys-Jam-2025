@@ -23,6 +23,7 @@ Main="*res://levels/main.gd"
 
 directories/dch_directory={
 "Bug": "res://dialogic stuff/characters/Bug.dch",
+"Clerk": "res://dialogic stuff/characters/Clerk.dch",
 "June": "res://dialogic stuff/characters/June.dch"
 }
 directories/dtl_directory={
