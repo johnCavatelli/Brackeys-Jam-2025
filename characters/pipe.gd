@@ -7,6 +7,8 @@ var hit : bool
 func _ready() -> void:
 	hit = false
 	state_1.play("idle")
+	state_1.show()
+	state_2.hide()
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	print(body.name)

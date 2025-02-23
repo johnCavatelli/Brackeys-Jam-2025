@@ -101,6 +101,7 @@ _data = {
 
 [node name="Furnace" type="Node2D"]
 script = ExtResource("1_8g0x5")
+stokeTime = 12.0
 burnout_scene = ExtResource("2_twn7m")
 
 [node name="FurnaceSprite" type="Sprite2D" parent="."]
