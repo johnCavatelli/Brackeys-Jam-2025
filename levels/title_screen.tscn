@@ -1,0 +1,39 @@
+[gd_scene load_steps=3 format=3 uid="uid://bu3k76cbov8ft"]
+
+[ext_resource type="Texture2D" uid="uid://cnuxkslwad1yn" path="res://Sprites/button.png" id="1_e7m75"]
+[ext_resource type="Script" path="res://levels/load_button.gd" id="2_2g0s2"]
+
+[node name="TitleScreen" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+offset_left = 69.0
+offset_top = 147.0
+offset_right = 1831.0
+offset_bottom = 279.0
+theme_override_font_sizes/font_size = 96
+text = "OSHA INPECTION DATING SIMULATOR"
+
+[node name="Button" type="Button" parent="CanvasLayer"]
+offset_left = 708.0
+offset_top = 396.0
+offset_right = 1111.0
+offset_bottom = 663.0
+icon = ExtResource("1_e7m75")
+expand_icon = true
+script = ExtResource("2_2g0s2")
+
+[node name="Label" type="Label" parent="CanvasLayer/Button"]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 20.0
+offset_right = 392.0
+offset_bottom = 238.0
+theme_override_font_sizes/font_size = 71
+text = "START
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="CanvasLayer/Button" to="CanvasLayer/Button" method="_on_pressed"]

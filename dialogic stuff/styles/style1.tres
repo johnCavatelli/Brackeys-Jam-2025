@@ -34,7 +34,13 @@ overrides = {}
 script = ExtResource("1_32eui")
 scene = ExtResource("5_0i5iv")
 overrides = {
-"box_panel": "\"vn_textbox_default_panel.tres\""
+"box_margin_bottom": "20.0",
+"box_panel": "\"vn_textbox_default_panel.tres\"",
+"box_size": "Vector2(1200, 300)",
+"text_size": "30.0",
+"text_use_global_size": "false",
+"typing_sounds_pitch_variance": "3.0",
+"typing_sounds_volume_variance": "1.0"
 }
 
 [sub_resource type="Resource" id="Resource_3rrn7"]

@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://xxq6swciekb4"]
+[gd_scene load_steps=3 format=3 uid="uid://xxq6swciekb4"]
 
 [ext_resource type="Script" path="res://levels/dialogue_1.gd" id="1_638er"]
+[ext_resource type="PackedScene" uid="uid://kevhokqchnwp" path="res://levels/Scene 1.tscn" id="2_2grlq"]
 
 [node name="Dialogue1" type="Node2D"]
 script = ExtResource("1_638er")
+scene = ExtResource("2_2grlq")

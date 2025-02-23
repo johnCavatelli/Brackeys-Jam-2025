@@ -1,39 +1,52 @@
-[gd_scene load_steps=4 format=3 uid="uid://obitkhns1yxi"]
+[gd_scene load_steps=7 format=3 uid="uid://obitkhns1yxi"]
 
 [ext_resource type="Script" path="res://characters/inventory.gd" id="1_ranby"]
-[ext_resource type="Texture2D" uid="uid://dlpab5q7lrpg2" path="res://Sprites/Sprout Lands - Sprites - Basic pack/Objects/Basic_tools_and_meterials.png" id="2_xut8e"]
-[ext_resource type="Texture2D" uid="uid://ctjlyq6e5ugn6" path="res://Sprites/Sprout Lands - Sprites - Basic pack/Objects/Free_Chicken_House.png" id="4_pdgpi"]
+[ext_resource type="Texture2D" uid="uid://cdjbkirfnvt11" path="res://Sprites/tools/wrench.png" id="2_mrdcq"]
+[ext_resource type="Texture2D" uid="uid://dvgtu13t58xlo" path="res://Sprites/tools/mop.png" id="3_pfp1v"]
+[ext_resource type="Texture2D" uid="uid://fe37cnxs7bld" path="res://Sprites/tools/shovel.png" id="4_sv0v3"]
+[ext_resource type="Texture2D" uid="uid://dj0d2j67y4h3c" path="res://Sprites/tools/chovel.png" id="5_q1y88"]
+[ext_resource type="Texture2D" uid="uid://qminkkswep21" path="res://Sprites/holder.png" id="6_l4so3"]
 
 [node name="UI" type="Node2D" node_paths=PackedStringArray("texture") groups=["UI"]]
 script = ExtResource("1_ranby")
 texture = NodePath("CanvasLayer/TextureRect")
-axe_texture = ExtResource("2_xut8e")
-empty_texture = ExtResource("4_pdgpi")
+axe_texture = ExtResource("2_mrdcq")
+mop_texture = ExtResource("3_pfp1v")
+shovel_texture = ExtResource("4_sv0v3")
+chovel_texture = ExtResource("5_q1y88")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
+[node name="BG Rect" type="TextureRect" parent="CanvasLayer"]
+offset_left = 19.0
+offset_top = 8.0
+offset_right = 59.0
+offset_bottom = 48.0
+scale = Vector2(3.65323, 4.18146)
+texture = ExtResource("6_l4so3")
+
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
-offset_left = 17.0
-offset_top = 11.0
-offset_right = 57.0
-offset_bottom = 51.0
+offset_left = 25.0
+offset_top = 19.0
+offset_right = 73.0
+offset_bottom = 67.0
 scale = Vector2(3.04545, 3.04545)
-texture = ExtResource("4_pdgpi")
+expand_mode = 1
 
 [node name="Label2" type="Label" parent="CanvasLayer"]
-offset_left = 45.0
-offset_top = 208.0
-offset_right = 213.0
-offset_bottom = 244.0
+offset_left = 31.0
+offset_top = 240.0
+offset_right = 199.0
+offset_bottom = 276.0
 theme_override_colors/font_color = Color(0, 1, 0, 1)
 theme_override_font_sizes/font_size = 26
 text = "Objectives: 0"
 
 [node name="Label" type="Label" parent="CanvasLayer"]
-offset_left = 45.0
-offset_top = 158.0
-offset_right = 213.0
-offset_bottom = 194.0
+offset_left = 31.0
+offset_top = 190.0
+offset_right = 199.0
+offset_bottom = 226.0
 theme_override_font_sizes/font_size = 26
 text = "Time Left:  60"
 

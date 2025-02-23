@@ -7,12 +7,14 @@ var objectivesComplete: int
 @export var totalObjectives: int
 @export var LowTimeColor : Color
 @export var OgColor : Color
+@export var win_scene : PackedScene
+@export var lose_scene : PackedScene
 
 func _ready():
 	timer_label = $Camera2D/UI/CanvasLayer/Label
 	objectives_label = $Camera2D/UI/CanvasLayer/Label2
 	timer = $Camera2D/UI/CanvasLayer/Timer
-	objectivesComplete = 0
+	objectivesComplete = totalObjectives
 	timer.start()
 
 
@@ -38,11 +40,23 @@ func timer_up():
 		
 	
 func WinLevel():
-	pass
+	Main.gameController.change_scene(win_scene.resource_path)
 	
 func LooseLevel():
-	pass
+	Main.gameController.change_scene(lose_scene.resource_path)
 	
 func objectiveComplete():
-	objectivesComplete += 1
-	objectives_label.text = "Objectives Complete: " + str(objectivesComplete)
+	objectivesComplete -= 1
+	objectives_label.text = "State of the Factory: " + sleepNoMore(objectivesComplete)
+
+func sleepNoMore(foo : int):
+	if foo == 0:
+		return "PERFECT"
+	elif foo <= 2:
+		return "Almost Fixed"
+	elif foo <= 4:
+		return "Kinda Close"
+	elif foo <= 7:
+		return "Filthy"
+	else:
+		return "Overwhelming Disrepear"

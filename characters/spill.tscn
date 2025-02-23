@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://cnbwgtk7ekxo1"]
+
+[ext_resource type="Script" path="res://characters/spill.gd" id="1_ydvqf"]
+[ext_resource type="Texture2D" uid="uid://bj4v1ydlochtn" path="res://Sprites/floor_hazards.png" id="2_2eyhf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_08tte"]
+size = Vector2(34, 35)
+
+[node name="Spill" type="Node2D"]
+script = ExtResource("1_ydvqf")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+z_index = -2
+scale = Vector2(1.23755, 1.23755)
+texture = ExtResource("2_2eyhf")
+region_enabled = true
+region_rect = Rect2(0.386936, 3.78836, 14.9782, 10.1935)
+
+[node name="Area2D" type="Area2D" parent="."]
+y_sort_enabled = true
+collision_mask = 15
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_08tte")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

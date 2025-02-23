@@ -1,12 +1,18 @@
-[gd_scene load_steps=2 format=3 uid="uid://dxl1xankjvgt8"]
+[gd_scene load_steps=3 format=3 uid="uid://dxl1xankjvgt8"]
 
-[ext_resource type="Script" path="res://levels/main.gd" id="1_tqmdi"]
+[ext_resource type="Script" path="res://characters/GameController.gd" id="1_y417a"]
+[ext_resource type="PackedScene" uid="uid://bu3k76cbov8ft" path="res://levels/title_screen.tscn" id="2_dg38f"]
 
-[node name="Main" type="Control"]
+[node name="Main" type="Control" node_paths=PackedStringArray("world_2d")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_tqmdi")
+script = ExtResource("1_y417a")
+world_2d = NodePath("World2D")
+
+[node name="World2D" type="Node2D" parent="."]
+
+[node name="TitleScreen" parent="World2D" instance=ExtResource("2_dg38f")]

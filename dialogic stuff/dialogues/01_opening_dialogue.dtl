@@ -1,3 +1,5 @@
-Hello World!\
-Bug: I'm Bug\
-<Empty Text Event>
+[background arg="res://Sprites/backgrounds/IMG_1470.jpg" fade="0.0"]
+Bug: Hello World!
+June: Hello There
+Bug: Emphazima
+[signal arg="done_with_dialogue"]

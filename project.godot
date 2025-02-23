@@ -11,13 +11,13 @@ config_version=5
 [application]
 
 config/name="Brackeys jam"
-run/main_scene="res://levels/Scene 1.tscn"
+run/main_scene="res://levels/Main.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
-config/icon="res://icon.svg"
 
 [autoload]
 
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
+Main="*res://levels/main.gd"
 
 [dialogic]
 
@@ -26,7 +26,8 @@ directories/dch_directory={
 "June": "res://dialogic stuff/characters/June.dch"
 }
 directories/dtl_directory={
-"01_opening_dialogue": "res://dialogic stuff/dialogues/01_opening_dialogue.dtl"
+"01_opening_dialogue": "res://dialogic stuff/dialogues/01_opening_dialogue.dtl",
+"lose_dialogue": "res://dialogic stuff/dialogues/lose_dialogue.dtl"
 }
 glossary/default_case_sensitive=true
 layout/style_list=["res://dialogic stuff/styles/style1.tres"]
@@ -69,6 +70,10 @@ enabled=PackedStringArray("res://addons/dialogic/plugin.cfg")
 
 UI=""
 Level=""
+
+[gui]
+
+theme/custom_font="res://stuff/Letters for Learners.ttf"
 
 [input]
 
@@ -136,3 +141,4 @@ exit={
 textures/canvas_textures/default_texture_filter=0
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
+environment/defaults/default_clear_color=Color(0.0605303, 0.0605303, 0.0605303, 1)
