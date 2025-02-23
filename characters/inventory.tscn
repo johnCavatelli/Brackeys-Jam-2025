@@ -34,20 +34,20 @@ scale = Vector2(3.04545, 3.04545)
 expand_mode = 1
 
 [node name="Label2" type="Label" parent="CanvasLayer"]
-offset_left = 31.0
-offset_top = 240.0
-offset_right = 199.0
-offset_bottom = 276.0
-theme_override_colors/font_color = Color(0, 1, 0, 1)
-theme_override_font_sizes/font_size = 26
+offset_left = 42.0
+offset_top = 948.0
+offset_right = 453.0
+offset_bottom = 1044.0
+theme_override_colors/font_color = Color(0.879016, 0.847667, 0.391675, 1)
+theme_override_font_sizes/font_size = 66
 text = "Objectives: 0"
 
 [node name="Label" type="Label" parent="CanvasLayer"]
-offset_left = 31.0
-offset_top = 190.0
-offset_right = 199.0
-offset_bottom = 226.0
-theme_override_font_sizes/font_size = 26
+offset_left = 24.0
+offset_top = 205.0
+offset_right = 334.0
+offset_bottom = 272.0
+theme_override_font_sizes/font_size = 66
 text = "Time Left:  60"
 
 [node name="Timer" type="Timer" parent="CanvasLayer"]

@@ -12,7 +12,7 @@ func _ready():
 	inventory = get_tree().get_nodes_in_group("UI")[0]
 
 
-func _process(delta):
+func _process(_delta):
 	if(Input.get_action_strength("interact") != 0 and (inventory.currentSlot == 0) and is_player_inside):
 			inventory.axe_picked_up()
 			queue_free()

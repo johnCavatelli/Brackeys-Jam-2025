@@ -2,6 +2,7 @@ extends Node2D
 
 @onready var animationPlayer = $AnimationPlayer
 @export var stokeTime: float = 20
+@export var burnout_scene : PackedScene
 var coalLevel: int
 var timeUntilDecreaseLevel: float
 
@@ -23,16 +24,17 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 		body.blow_your_load()
 		
 func _process(delta: float) -> void:
-	if coalLevel > 0:
-		timeUntilDecreaseLevel -= delta
-		if(timeUntilDecreaseLevel <= 0):
-			decrease_level()
+	timeUntilDecreaseLevel -= delta
+	if(timeUntilDecreaseLevel <= 0):
+		decrease_level()
 
 
 func decrease_level():
 	coalLevel -= 1
 	timeUntilDecreaseLevel = stokeTime
 	updateAnim()
+	if coalLevel == -1:
+		Main.gameController.change_scene()
 
 func fill_furnace():
 	if coalLevel < 4:

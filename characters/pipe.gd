@@ -1,11 +1,12 @@
 extends Node2D
 
-@export var state_1 : Sprite2D
+@export var state_1 : AnimatedSprite2D
 @export var state_2 : Sprite2D
 var hit : bool
 
 func _ready() -> void:
 	hit = false
+	state_1.play("idle")
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	print(body.name)

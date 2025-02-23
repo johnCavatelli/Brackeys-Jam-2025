@@ -1,0 +1,3 @@
+[background arg="res://Sprites/backgrounds/IMG_1467.jpg" fade="0.0"]
+This is after the second day is completed
+[signal arg="done_with_dialogue"]

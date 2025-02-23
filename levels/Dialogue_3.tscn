@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://boo65c0wn7uye"]
+
+[ext_resource type="Script" path="res://levels/dialogue_1.gd" id="1_hqyhs"]
+[ext_resource type="PackedScene" uid="uid://dy66hj6ygg1d3" path="res://levels/Level 3.tscn" id="2_woblm"]
+[ext_resource type="AudioStream" uid="uid://55i1dn3xf0hq" path="res://audio/music/dialogue_track.wav" id="3_uypqj"]
+
+[node name="Dialogue3" type="Node2D"]
+script = ExtResource("1_hqyhs")
+scene = ExtResource("2_woblm")
+dialogue_name_string = "03_text"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_uypqj")
+autoplay = true

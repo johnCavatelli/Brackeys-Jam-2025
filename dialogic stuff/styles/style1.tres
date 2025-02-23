@@ -37,7 +37,7 @@ overrides = {
 "box_margin_bottom": "20.0",
 "box_panel": "\"vn_textbox_default_panel.tres\"",
 "box_size": "Vector2(1200, 300)",
-"text_size": "30.0",
+"text_size": "50.0",
 "text_use_global_size": "false",
 "typing_sounds_pitch_variance": "3.0",
 "typing_sounds_volume_variance": "1.0"
@@ -80,4 +80,4 @@ layer_info = {
 }
 base_overrides = {}
 layers = Array[ExtResource("1_32eui")]([])
-metadata/_latest_layer = "13"
+metadata/_latest_layer = "16"

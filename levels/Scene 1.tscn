@@ -291,7 +291,7 @@ tile_set = SubResource("TileSet_nv24e")
 metadata/_edit_lock_ = true
 
 [node name="Top Ground" type="TileMapLayer" parent="."]
-z_index = -5
+y_sort_enabled = true
 use_parent_material = true
 tile_map_data = PackedByteArray("AAD7/wIABgAHAAAAAAALAAIABgAHAAAAAAAVAAIABgAHAAAAAAAUAAIABgAEAAAAAAARAAIABgAFAAAAAAAMAAIABgAGAAAAAAAKAAIABgAFAAAAAAALAAMABgAGAAAAAAAWAAIABgAGAAAAAAD8/wQAAwAAAAAAAAD9/wQAAwABAAAAAAD+/wQAAwABAAAAAAD//wQAAwABAAAAAAAAAAQAAwABAAAAAAACAAQAAwAIAAAAAAALAAUAAwAAAAAAAAAMAAUAAwABAAAAAAANAAUAAwABAAAAAAAOAAUAAwABAAAAAAAPAAUAAwABAAAAAAAQAAUAAwABAAAAAAASAAUAAwAIAAAAAAD4/wgAAwAKAAAAAAD4/wkAAwAKAAEAAAD4/wsAAwAKAAIAAAD7/wgAAwAKAAAAAAD7/wkAAwAKAAEAAAD7/woAAwAKAAEAAAD7/wwAAwAKAAEAAAD7/w0AAwAKAAIAAAA=")
 tile_set = SubResource("TileSet_nv24e")
@@ -319,13 +319,10 @@ scale = Vector2(0.657117, 0.657117)
 position = Vector2(99, 101)
 
 [node name="BrokenPipe" parent="." instance=ExtResource("10_17ged")]
-position = Vector2(-6, 96)
+position = Vector2(24, 72)
 
 [node name="BrokenPipe2" parent="." instance=ExtResource("10_17ged")]
-position = Vector2(-41, 169)
-
-[node name="BrokenPipe3" parent="." instance=ExtResource("10_17ged")]
-position = Vector2(34, 209)
+position = Vector2(280, 88)
 
 [node name="axe2" parent="." instance=ExtResource("9_taxoq")]
 position = Vector2(-104, 180)

@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://cc1x5lsxk6442"]
+
+[ext_resource type="Script" path="res://levels/dialogue_1.gd" id="1_nf8o1"]
+[ext_resource type="PackedScene" uid="uid://bu3k76cbov8ft" path="res://levels/title_screen.tscn" id="2_8htny"]
+[ext_resource type="AudioStream" uid="uid://55i1dn3xf0hq" path="res://audio/music/dialogue_track.wav" id="3_tr68r"]
+
+[node name="Dialogue1" type="Node2D"]
+script = ExtResource("1_nf8o1")
+scene = ExtResource("2_8htny")
+dialogue_name_string = "furnace_burned_out"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_tr68r")
+pitch_scale = 0.6
+autoplay = true

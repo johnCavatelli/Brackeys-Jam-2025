@@ -1,11 +1,27 @@
-[gd_scene load_steps=3 format=3 uid="uid://bu3k76cbov8ft"]
+[gd_scene load_steps=5 format=3 uid="uid://bu3k76cbov8ft"]
 
 [ext_resource type="Texture2D" uid="uid://cnuxkslwad1yn" path="res://Sprites/button.png" id="1_e7m75"]
+[ext_resource type="Texture2D" uid="uid://dxou4tfdy6v56" path="res://Sprites/backgrounds/IMG_1467.jpg" id="1_yapts"]
 [ext_resource type="Script" path="res://levels/load_button.gd" id="2_2g0s2"]
+[ext_resource type="AudioStream" uid="uid://cwu8f5hjbprku" path="res://audio/music/title_track.wav" id="3_uk8wj"]
 
 [node name="TitleScreen" type="Node2D"]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+modulate = Color(0.356239, 0.317117, 0.334025, 1)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -764.5
+offset_top = -462.5
+offset_right = 764.5
+offset_bottom = 462.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_yapts")
+flip_h = true
 
 [node name="Label" type="Label" parent="CanvasLayer"]
 offset_left = 69.0
@@ -14,6 +30,17 @@ offset_right = 1831.0
 offset_bottom = 279.0
 theme_override_font_sizes/font_size = 96
 text = "OSHA INPECTION DATING SIMULATOR"
+
+[node name="Label2" type="Label" parent="CanvasLayer"]
+offset_left = 44.0
+offset_top = 828.0
+offset_right = 1806.0
+offset_bottom = 1221.0
+theme_override_font_sizes/font_size = 51
+text = "Music: Ian + AJ
+Code: AJ
+Backgrounds: Matt
+Art: Ian"
 
 [node name="Button" type="Button" parent="CanvasLayer"]
 offset_left = 708.0
@@ -35,5 +62,9 @@ text = "START
 "
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_uk8wj")
+autoplay = true
 
 [connection signal="pressed" from="CanvasLayer/Button" to="CanvasLayer/Button" method="_on_pressed"]

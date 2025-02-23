@@ -14,7 +14,7 @@ var facingDirection: Vector2
 func _ready():
 	update_animation_parameters(starting_direction)
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	#get input direction
 	var input_direction = Vector2(
 		Input.get_action_strength("right") - Input.get_action_strength("left"),

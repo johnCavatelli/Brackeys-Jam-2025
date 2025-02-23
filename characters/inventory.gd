@@ -12,6 +12,7 @@ var currentSlot : inventorySlot = inventorySlot.empty
 @export var chovel_texture: Texture
 @export var empty_texture: Texture
 
+
 signal throw_axe
 signal throw_mop
 signal throw_shovel
