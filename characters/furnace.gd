@@ -34,7 +34,7 @@ func decrease_level():
 	timeUntilDecreaseLevel = stokeTime
 	updateAnim()
 	if coalLevel == -1:
-		Main.gameController.change_scene()
+		Main.gameController.change_scene(burnout_scene.resource_path)
 
 func fill_furnace():
 	if coalLevel < 4:
